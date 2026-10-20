@@ -1,0 +1,24 @@
+# Windows / Explorer
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# macOS
+.DS_Store
+._*
+
+# 3ds Max 自动备份与临时文件
+*.bak
+*.bak1
+*.bak2
+*.autobak
+autobak/
+*.tmp
+max.log
+Max.log
+relink_log.txt
+
+# 编辑器
+.vscode/
+.idea/
+*.swp

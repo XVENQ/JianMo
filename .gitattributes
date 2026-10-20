@@ -1,0 +1,26 @@
+# 3ds Max 场景与贴图一律按二进制处理，避免行尾转换损坏文件
+*.max binary
+*.chr binary
+*.mat binary
+*.architectural binary
+
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.tga binary
+*.tif binary
+*.tiff binary
+*.bmp binary
+*.psd binary
+
+*.zip binary
+
+# 文本文件：GitHub 与本地都能正常显示
+*.md text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.ms text eol=crlf
+*.txt text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
+LICENSE text eol=lf

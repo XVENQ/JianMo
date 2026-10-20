@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3ds Max 三维建模作品集 · 索引</title>
+<style>
+  :root{
+    --bg:#fafaf9; --panel:#fff; --ink:#17181a; --muted:#71717a;
+    --line:#e7e5e4; --accent:#0f766e; --soft:#f0fdfa; --softline:#99f6e4;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",system-ui,sans-serif;
+    line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1120px;margin:0 auto;padding:56px 28px 80px}
+  header{border-bottom:1px solid var(--line);padding-bottom:28px;margin-bottom:36px}
+  .kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600}
+  h1{font-size:34px;line-height:1.25;margin:10px 0 12px;letter-spacing:-.01em}
+  .sub{color:var(--muted);font-size:15px;max-width:64ch}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+  .chip{font-size:12.5px;padding:4px 11px;border:1px solid var(--line);border-radius:999px;background:var(--panel);color:#3f3f46}
+  .chip b{color:var(--ink);font-weight:600}
+  h2{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;
+     margin:44px 0 16px;display:flex;align-items:center;gap:12px}
+  h2::after{content:"";flex:1;height:1px;background:var(--line)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px 14px;
+        position:relative;transition:.16s ease;overflow:hidden}
+  .card:hover{border-color:var(--softline);box-shadow:0 6px 22px -14px rgba(15,118,110,.5);transform:translateY(-2px)}
+  .num{font-size:26px;font-weight:700;color:#d4d4d8;letter-spacing:-.02em;line-height:1}
+  .card:hover .num{color:var(--accent)}
+  .cn{font-size:15px;font-weight:600;margin:8px 0 10px;letter-spacing:-.005em}
+  .tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px}
+  .tag{font-size:11px;padding:2px 7px;border-radius:4px;background:var(--soft);color:#0f766e;border:1px solid var(--softline)}
+  .meta{font-size:12px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;border-top:1px dashed var(--line);padding-top:9px}
+  .path{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:11.5px;color:#a1a1aa}
+  .rowlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:8px}
+  .row{display:flex;align-items:baseline;gap:10px;padding:7px 12px;background:var(--panel);
+       border:1px solid var(--line);border-radius:8px;font-size:13.5px}
+  .row i{font-style:normal;font-family:ui-monospace,Consolas,monospace;font-size:11px;color:#a1a1aa;min-width:26px}
+  .row span{color:var(--muted);font-size:11.5px;margin-left:auto;white-space:nowrap}
+  .note{margin-top:52px;padding:22px 24px;background:var(--panel);border:1px solid var(--line);
+        border-left:3px solid var(--accent);border-radius:8px;font-size:13.5px;color:#3f3f46}
+  .note b{color:var(--ink)}
+  .note ul{margin:10px 0 0;padding-left:18px}
+  .note li{margin:4px 0}
+  footer{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);
+         display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  code{font-family:ui-monospace,Consolas,monospace;font-size:12px;background:#f4f4f5;padding:1px 5px;border-radius:4px}
+  @media (max-width:600px){h1{font-size:26px}.wrap{padding:36px 18px 60px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">3ds Max Portfolio · 2025–2026</div>
+    <h1>三维制作技术 · 建模作品集</h1>
+    <p class="sub">一学期 46 个课堂练习与作业，整理为 13 件精选作品与 30 件技法归档。每件保留 3ds Max 原生场景与配套贴图，可直接打开、可逐件回溯。</p>
+    <div class="chips">
+      <div class="chip"><b>43</b> 个 .max</div>
+      <div class="chip"><b>33.1 MB</b> 场景体积</div>
+      <div class="chip"><b>3ds Max 2022</b> 简体中文</div>
+      <div class="chip">系统单位 <b>毫米</b></div>
+      <div class="chip">贴图 <b>15</b> 张随附</div>
+      <div class="chip">许可 <b>CC BY-NC 4.0</b></div>
+    </div>
+  </header>
+
+  <h2>精选作品 · works</h2>
+  <div class="grid" id="feat"></div>
+
+  <h2>技法归档 · archive</h2>
+  <div class="rowlist" id="arch"></div>
+
+  <div class="note">
+    <b>整理逻辑说明</b>
+    <ul>
+      <li>按<b>技法</b>而非日期排序：二维图形 → 三维基本体 → 复合对象 → 多边形建模 → 材质贴图 → 场景合成，一条链路走完。</li>
+      <li>同题材多版本只留依赖最完整的一版，被替代的版本不进仓库（原始文件未删除）。</li>
+      <li>教师录屏（1.1 GB）、教材图库（430 MB）、教材成套范例工程（114 MB）与入门单点练习共 <b>15 个 .max</b> 明确排除，理由见 <code>docs/排除说明.md</code>。</li>
+      <li>贴图保持原文件名并就近放在 <code>textures/</code>，配 <code>scripts/relink_textures.ms</code> 一键重链——因为原始场景引用的是机房绝对路径。</li>
+    </ul>
+  </div>
+
+  <footer>
+    <span>郑州铁路职业技术学院 · 计算机网络技术（可视化技术方向）· 2025 级</span>
+    <span>XVENQ · 2026</span>
+  </footer>
+</div>
+<script>
+const DATA = {"feat": [{"num": "01", "cn": "直跑楼梯（踏步 + 金属栏杆）", "folder": "staircase-concrete", "size": "888 KB", "tex": 1, "tags": ["阵列复制", "长方体建模", "贴图"]}, {"num": "02", "cn": "旋转楼梯（中柱螺旋）", "folder": "spiral-staircase", "size": "936 KB", "tex": 0, "tags": ["阵列旋转", "结构推敲"]}, {"num": "03", "cn": "踢脚线与石膏线（沿墙贴合）", "folder": "skirting-line", "size": "1.2 MB", "tex": 0, "tags": ["样条线", "扫描/放样", "轮廓偏移"]}, {"num": "04", "cn": "三人沙发（切角软体）", "folder": "sofa", "size": "604 KB", "tex": 0, "tags": ["切角长方体", "FFD", "圆角"]}, {"num": "05", "cn": "玄关柜（板式家具）", "folder": "console-cabinet", "size": "596 KB", "tex": 0, "tags": ["矩形挤出", "板式结构"]}, {"num": "06", "cn": "独立浴缸（曲面壳体）", "folder": "bathtub", "size": "608 KB", "tex": 0, "tags": ["曲面建模", "壳厚度"]}, {"num": "07", "cn": "水晶吊灯（布尔 + 阵列挂件）", "folder": "crystal-chandelier", "size": "584 KB", "tex": 0, "tags": ["布尔", "阵列", "多材质"]}, {"num": "08", "cn": "陶罐（车削 + 贴图）", "folder": "clay-pot", "size": "536 KB", "tex": 1, "tags": ["FFD", "柱状 UVW", "贴图"]}, {"num": "09", "cn": "金属器皿组（多截面放样）", "folder": "vessels", "size": "740 KB", "tex": 2, "tags": ["多截面放样", "金属材质"]}, {"num": "10", "cn": "台盆 / 洗手池（产品建模）", "folder": "washbasin", "size": "1.2 MB", "tex": 0, "tags": ["曲面建模", "布尔开孔"]}, {"num": "11", "cn": "苹果（有机多边形建模）", "folder": "apple", "size": "584 KB", "tex": 0, "tags": ["编辑多边形", "软选择"]}, {"num": "12", "cn": "水果商标（图形合并 + 挤出）", "folder": "logo-fruit", "size": "836 KB", "tex": 1, "tags": ["图形合并", "挤出", "贴图"]}, {"num": "13", "cn": "室内场景（构件 + 家具 + 多维子材质）", "folder": "interior-scene", "size": "588 KB", "tex": 10, "tags": ["场景合成", "多维子材质"]}], "arch": [{"num": "a01", "cn": "花架", "folder": "flower-stand", "size": "656 KB", "tex": 0, "tags": ["样条线 + 布尔"]}, {"num": "a02", "cn": "吊灯（3.25 版，8 次布尔）", "folder": "pendant-lamp-a", "size": "1.2 MB", "tex": 0, "tags": ["布尔 + 球体阵列"]}, {"num": "a03", "cn": "吊灯（4.7 版）", "folder": "pendant-lamp-b", "size": "920 KB", "tex": 0, "tags": ["样条线 + 球体"]}, {"num": "a04", "cn": "吊灯（3.16 版）", "folder": "pendant-lamp-c", "size": "640 KB", "tex": 0, "tags": ["样条线 + 布尔"]}, {"num": "a05", "cn": "橱柜", "folder": "kitchen-cabinet", "size": "624 KB", "tex": 0, "tags": ["板式结构"]}, {"num": "a06", "cn": "躺椅", "folder": "lounge-chair", "size": "664 KB", "tex": 0, "tags": ["切角 + 圆柱"]}, {"num": "a07", "cn": "抽屉 / 床头柜", "folder": "drawer-unit", "size": "696 KB", "tex": 0, "tags": ["FFD 密集形变"]}, {"num": "a08", "cn": "马克杯", "folder": "cup", "size": "804 KB", "tex": 0, "tags": ["圆柱 + 曲面"]}, {"num": "a09", "cn": "足球（拓扑推敲）", "folder": "football", "size": "740 KB", "tex": 0, "tags": ["球面拓扑"]}, {"num": "a10", "cn": "香蕉（放样）", "folder": "banana", "size": "580 KB", "tex": 0, "tags": ["放样 + 弯曲"]}, {"num": "a11", "cn": "鱼缸", "folder": "fish-tank", "size": "636 KB", "tex": 0, "tags": ["放样 + 圆环"]}, {"num": "a12", "cn": "牙膏", "folder": "toothpaste", "size": "596 KB", "tex": 0, "tags": ["放样"]}, {"num": "a13", "cn": "枕头（FFD 软体）", "folder": "pillow", "size": "848 KB", "tex": 0, "tags": ["FFD 形变"]}, {"num": "a14", "cn": "甜筒", "folder": "icecream-cone", "size": "764 KB", "tex": 0, "tags": ["星形 + 放样"]}, {"num": "a15", "cn": "笔筒", "folder": "pencil-holder", "size": "600 KB", "tex": 0, "tags": ["圆环 + 布尔"]}, {"num": "a16", "cn": "浮雕文字（图形合并）", "folder": "relief-text", "size": "644 KB", "tex": 0, "tags": ["图形合并 + 球体"]}, {"num": "a17", "cn": "墙上置物架", "folder": "wall-shelf", "size": "596 KB", "tex": 0, "tags": ["矩形 + 布尔"]}, {"num": "a18", "cn": "室内布局（木纹方案）", "folder": "layout-wood", "size": "1.1 MB", "tex": 0, "tags": ["场景布局"]}, {"num": "a19", "cn": "室内布局（橙色方案）", "folder": "layout-orange", "size": "916 KB", "tex": 0, "tags": ["场景布局 + 布尔"]}, {"num": "a20", "cn": "圆桌（静物场景）", "folder": "dining-table", "size": "1.1 MB", "tex": 0, "tags": ["布尔 + 圆柱"]}, {"num": "a21", "cn": "蜡烛（静物场景）", "folder": "candle", "size": "888 KB", "tex": 0, "tags": ["圆柱 + 样条线"]}, {"num": "a22", "cn": "U 盘（产品建模）", "folder": "usb-drive", "size": "556 KB", "tex": 0, "tags": ["倒角 + 细节"]}, {"num": "a23", "cn": "写字台", "folder": "writing-desk", "size": "616 KB", "tex": 0, "tags": ["切角 + 圆锥"]}, {"num": "a24", "cn": "酒杯", "folder": "wine-glass", "size": "576 KB", "tex": 0, "tags": ["样条线车削"]}, {"num": "a25", "cn": "凳子", "folder": "stool", "size": "632 KB", "tex": 0, "tags": ["矩形 + 阵列"]}, {"num": "a26", "cn": "墙面（材质试验）", "folder": "wall-panel", "size": "912 KB", "tex": 0, "tags": ["材质试验"]}, {"num": "a27", "cn": "扣子（细节建模）", "folder": "button-set", "size": "2.2 MB", "tex": 0, "tags": ["倒角 + FFD"]}, {"num": "a28", "cn": "水晶球", "folder": "crystal-ball", "size": "584 KB", "tex": 0, "tags": ["球体 + 布尔"]}, {"num": "a29", "cn": "多维子材质演示", "folder": "multi-sub-material", "size": "660 KB", "tex": 0, "tags": ["多维子材质"]}, {"num": "a30", "cn": "转头（放样练习）", "folder": "turned-object", "size": "768 KB", "tex": 0, "tags": ["放样 + 矩形截面"]}]};
+const fbox = document.getElementById('feat');
+DATA.feat.forEach(w=>{
+  const d=document.createElement('div');
+  d.className='card';
+  d.innerHTML = `<div class="num">${w.num}</div>
+    <div class="cn">${w.cn}</div>
+    <div class="tags">${w.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+    <div class="meta"><span>${w.size}</span>${w.tex?`<span>贴图 ${w.tex}</span>`:''}<span class="path">works/${w.folder}</span></div>`;
+  fbox.appendChild(d);
+});
+const abox = document.getElementById('arch');
+DATA.arch.forEach(w=>{
+  const d=document.createElement('div');
+  d.className='row';
+  d.innerHTML = `<i>${w.num}</i>${w.cn}<span>${w.tags[0]||''}</span>`;
+  abox.appendChild(d);
+});
+</script>
+</body>
+</html>
